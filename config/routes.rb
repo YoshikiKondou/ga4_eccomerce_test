@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/users/sign_in'
   post '/users/login'
   get '/users/logout'
+  get '/products/index', to: 'products#index'
+  get '/products/:id', to: 'products#show', as: 'product'
 
   resources :users, only: [:new, :create, :edit, :update, :show]
   get '/', to: 'home#top'

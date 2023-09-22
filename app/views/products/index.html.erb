@@ -1,0 +1,10 @@
+<h1>商品一覧</h1>
+
+<% @products.each do |product| %>
+  <%= link_to product.name, product_path(product), data: {"turbo"=>false}, class: "nav-link" %><br>
+  <div>price: <%= product.price %><br></div>
+  <div>brand: <%= product.brand %><br></div>
+  <div>product_category: <%= product.product_category %><br></div>
+  <br>
+
+<% end %>

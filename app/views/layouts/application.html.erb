@@ -20,6 +20,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarScroll">
               <ul class="navbar-nav mr-auto">
+                <li class="ms-3"><%= link_to("商品一覧", "/products/index", class: "nav-link") %></li>
                 <li class="ms-3"><%= link_to("新規登録", "/users/new", data: {"turbo"=>false}, class: "nav-link") %></li>
                 <li class="ms-3"><%= link_to "ログイン", users_sign_in_path, data: {"turbo"=>false}, class: "nav-link" %></li>
                 <% if current_user? %> 
